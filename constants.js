@@ -95,16 +95,16 @@ export const SKILLS = {
 export const PROJECTS = [
   {
     name: "Green City",
-    image: "/projects/greencity.jpeg",
+    image: "/projects/greencity.jpg",
     blurImage: "/projects/blur/greencity-blur.jpg",
-    description: "Complaint Management Stystem",
+    description: "Complaint Management System",
     gradient: ["#F14658", "#DC2537"],
     url: "https://sivarajpaldurai.pythonanywhere.com",
     tech: ["html", "css", "python","django", "sqlite"],
   },
   {
     name: "Sky Watch",
-    image: "/projects/skywatch.jpeg",
+    image: "/projects/skywatch.jpg",
     blurImage: "/projects/blur/skywatch-blur.jpg",
     description: "Realtime weather data and forecasts.",
     gradient: ["#FFA62E", "#EA4D2C"],
@@ -113,7 +113,7 @@ export const PROJECTS = [
   },
   {
     name: "Rathna Store",
-    image: "/projects/rathnastore.jpeg",
+    image: "/projects/rathnastore.jpg",
     blurImage: "/projects/blur/rathnastore-blur.jpg",
     description:
       "Ecommerce with Razorpay Integration",
@@ -123,7 +123,7 @@ export const PROJECTS = [
   },
   {
     name: "Man Power",
-    image: "/projects/manpowerlight.png",
+    image: "/projects/manpower.png",
     blurImage: "/projects/blur/tesla-blur.webp",
     description: "Managing workforce and job assignments efficiently.",
     gradient: ["#142D46", "#2E4964"],
@@ -184,33 +184,13 @@ export const WORK_CONTENTS = {
     {
       title: "Backend Developer",
       description:
-        "Currently working at Cyces Innovation Labs, building scalable backend systems with Django and FastAPI, and integrating secure authentication and APIs for real-world applications.",
+        "Currently working at Cyces Innovation Labs, where I build scalable backend systems using Django and integrate various external services and APIs to enhance functionality and performance.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
           Backend Developer (May 2025 – Present)
         </div>
       ),
-    },
-    {
-      title: "Face Recognition & Computer Vision",
-      description:
-        "Built and deployed a real-time face recognition system using DeepFace and OpenCV for employee attendance tracking. Integrated system camera support and face embeddings for accuracy.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          AI & Face Recognition Projects
-        </div>
-      ),
-    },
-    {
-      title: "Excel & Report Automation",
-      description:
-        "Automated Excel report generation using Django for student/class attendance with monthly sheets and student-wise summaries, available for download via API in a Flutter app.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          API & Excel Report Generator
-        </div>
-      ),
-    },
+    }
   ],
 
   ZIGMA: [
@@ -224,36 +204,37 @@ export const WORK_CONTENTS = {
         </div>
       ),
     },
-    {
-      title: "Microservices with FastAPI",
-      description:
-        "Created FastAPI-based microservice applications and integrated AWS services like EC2 and S3. Built face comparison APIs using pretrained Dlib models and Python.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          FastAPI Microservices
-        </div>
-      ),
-    },
-    {
-      title: "Third-Party Integrations",
-      description:
-        "Integrated services like Firebase FCM for push notifications and Microsoft Intune for device policy control. Built custom scripts for topic-based notification delivery.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          API Integrations
-        </div>
-      ),
-    },
-    {
-      title: "Deployment & Optimization",
-      description:
-        "Handled Docker-based deployments, built internal dashboards using Django Admin and templates, and worked with DynamoDB for storing hierarchical business data.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          DevOps & Deployment
-        </div>
-      ),
-    },
+   {
+  title: "Development",
+  description:
+    "Developed end-to-end backend applications using Django. Integrated external tools and third-party APIs. Implemented asynchronous tasks using Celery for scalable and seamless background processing. Ensured secure and modular architecture throughout the development lifecycle.",
+  content: (
+    <div className="h-full w-full flex items-center justify-center text-white px-4">
+      Scalable Web Applications
+    </div>
+  ),
+},
+{
+  title: "Deployment & Infrastructure",
+  description:
+    "Deployed solutions on cloud VMs using traditional setup as well as Docker-based containers. Managed production environments with proper configuration, monitoring, and optimization for performance and reliability.",
+  content: (
+    <div className="h-full w-full flex items-center justify-center text-white px-4">
+      Cloud Services & Deployment
+    </div>
+  ),
+},
+{
+  title: "Collaboration & Delivery",
+  description:
+    "Collaborated closely with project managers, designers, and fellow engineers to transform ideas into reliable production-ready solutions. Participated in planning, code reviews, and iterative releases to deliver high-quality applications aligned with client and stakeholder goals.",
+  content: (
+    <div className="h-full w-full flex items-center justify-center text-white px-4">
+      Cross-functional Collaboration
+    </div>
+  ),
+}
+
   ],
 };
 
