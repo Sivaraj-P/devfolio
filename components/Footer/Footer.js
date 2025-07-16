@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Fade } from "react-reveal";
 import { Howl } from "howler";
 import Button from "../Button/Button";
@@ -10,6 +10,17 @@ import { MENULINKS } from "../../constants";
 
 const Footer = () => {
   const [playbackRate, setPlaybackRate] = useState(0.75);
+
+  const [visitorCount, setVisitorCount] = useState(0);
+
+useEffect(() => {
+  fetch(process.env.NEXT_PUBLIC_VISITOR_COUNT_API)
+    .then((res) => res.json())
+    .then((data) => {
+      if (data?.count) setVisitorCount(data.count);
+    })
+    .catch((err) => console.error("Visitor count fetch failed", err));
+}, []);
 
   const heartClickSound = new Howl({
     src: ["/sounds/glug-a.mp3"],
@@ -29,7 +40,7 @@ const Footer = () => {
         backgroundImage: `linear-gradient(to right, ${theme.colors.indigo.light}, ${theme.colors.indigo.dark})`,
       }}
     >
-      {/* <FooterBg /> */}
+      <FooterBg />
       <Fade bottom distance={"4rem"}>
         <div className="w-full h-full pt-32">
           <div className="section-container flex flex-col h-full justify-end z-10 items-center py-12">

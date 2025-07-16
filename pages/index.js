@@ -35,6 +35,20 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+  const hasVisited = localStorage.getItem("visited");
+
+  if (!hasVisited) {
+    fetch(process.env.NEXT_PUBLIC_VISITOR_API)
+      .then((res) => {
+        if (res.ok) {
+          localStorage.setItem("visited", "true");
+        }
+      })
+      .catch((err) => console.error("Visitor API error:", err));
+  }
+}, []);
+
+  useEffect(() => {
     const { innerWidth, innerHeight, orientation, history } = window;
 
     const result =
